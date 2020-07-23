@@ -1,0 +1,11 @@
+<div *ngFor="let message of messages">
+    {{message}}
+</div>
+<form>
+    <input [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()" name="message" />
+    <button (click)="sendMessage()">Send</button>
+</form>
+<div>Message counter: <code>
+    {{counter}}
+</code></div>
+
